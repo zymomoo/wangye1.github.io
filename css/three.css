@@ -1,0 +1,160 @@
+/* ================================= 
+全局设置
+==================================== */
+* {
+    box-sizing: border-box; /*让内边距无法改变盒模型的长宽*/
+    list-style: none;    /*去除ul的小圆点*/
+    text-decoration: none; /*去除超链接的下划线*/
+}
+/* ================================= 
+移动优先CSS规则
+==================================== */
+.main-header {
+    text-align: center;
+    background-color: #768db2;
+}
+.logo {
+    margin: 0;  /*重置logo的外边距*/
+}
+
+.logo a:hover {
+    text-shadow: 1px 1px 1px black;
+    transition: .3s;
+}
+
+.logo a {
+    padding: .5em 0;  /*改变logo的上下内边距*/
+}
+
+.navlist li a {
+    padding: 1em 0;   /*改变导航条超链接的上下内边距*/
+}
+
+/*当鼠标移动到导航项目时，改变背景颜色*/
+.navlist li a:hover {
+    background-color:#7DB534;
+    transition: .3s;
+    text-shadow: 1px 1px 1px black;
+}
+
+a {
+    /*将所有超链接变成块级元素block(超链接默认的显示方式是线级元素inline)*/
+    display:block;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #768db2;
+    color: white;
+}
+
+.wrap {
+    min-height: calc(100vh - 54px);
+    background-color: #768db2;
+}
+
+.banner {
+    background: url("../images/3.jpg");
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding: 1em 0;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-shadow:1px 1px 1px black;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h2 {
+    padding-top: 1em;
+}
+
+P {
+    margin: 0;
+    padding: 2em;
+    text-align: center;
+}
+
+
+
+.col  {
+    background-color: #1bb5b3;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+    padding: 1em 0;
+}
+
+
+/* ================================= 
+媒体查询:700px宽
+==================================== */
+@media (min-width:700px) {
+    .main-header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .navlist {
+        display: flex;
+        align-items: stretch;
+
+    }
+    
+    .navlist li a {
+        padding: 2em 2em;
+        
+    }
+    
+    .banner {
+        height: 500px;
+    }
+    
+    .container {
+        
+        padding: 3em 0;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .col {
+        flex-basis: 20%;
+        flex-grow: 1;
+        margin: 0 .5em;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+    
+    .col:hover {
+        box-shadow: 3px 3px 2px rgba(0,0,0,.5);
+        transition: .3s;
+        border: 1px solid black;
+        cursor: default;
+        text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+    }
+    
+    .col h1 {
+        padding: 0 .1em;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
